@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="animated-band absolute left-0 top-20 -z-10 h-72 w-full rotate-[-6deg] animate-gradient-shift opacity-90 blur-2xl dark:opacity-70" aria-hidden="true" />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white to-transparent dark:from-darkgray" aria-hidden="true" />
 
-      <div className="section-shell grid min-h-[calc(100vh-5rem)] items-center gap-14 pt-14 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="section-shell grid min-h-[calc(100vh-5rem)] items-center gap-14 pt-8 lg:grid-cols-[1.05fr_0.95fr]">
         <div>
           <Reveal className="inline-flex items-center gap-2 rounded-full border border-primary/[0.15] bg-white/[0.78] px-4 py-2 text-sm font-semibold text-primary shadow-sm backdrop-blur dark:border-cyan-300/20 dark:bg-white/[0.08] dark:text-cyan-200">
             <Sparkles className="h-4 w-4" aria-hidden="true" />
@@ -18,7 +18,7 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={80}>
-            <h1 className="mt-7 max-w-4xl text-4xl font-black leading-[1.06] text-ink sm:text-5xl lg:text-6xl dark:text-white">
+            <h1 className="mt-6 max-w-4xl text-4xl font-black leading-[1.08] text-ink sm:text-5xl lg:text-5xl 2xl:text-6xl dark:text-white">
               {owner.headline}
             </h1>
           </Reveal>
