@@ -31,7 +31,7 @@ export default function Hero() {
 
           <Reveal delay={240} className="mt-8 flex flex-col gap-3 sm:flex-row">
             <ButtonLink href="#projects" icon={ArrowRight}>View Projects</ButtonLink>
-            <ButtonLink href="/akisa-divine-resume.txt" icon={Download} variant="secondary" download>
+            <ButtonLink href="/divine-akisa-resume.txt" icon={Download} variant="secondary" download>
               Download Resume
             </ButtonLink>
             <ButtonLink href="#contact" icon={Mail} variant="ghost">Contact Me</ButtonLink>
@@ -53,17 +53,23 @@ export default function Hero() {
           <div className="glass-card relative overflow-hidden rounded-[2rem] p-5">
             <div className="aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-secondary via-primary to-accent p-1">
               <div className="flex h-full flex-col items-center justify-center rounded-[1.25rem] bg-white/90 p-8 text-center dark:bg-secondary/[0.92]">
-                <div className="grid h-40 w-40 place-items-center rounded-full border border-white/70 bg-gradient-to-br from-primary to-accent text-5xl font-black text-white shadow-glow">
-                  AD
-                </div>
-                <h2 className="mt-8 text-2xl font-bold text-ink dark:text-white">
+                <img
+                  src={owner.profileImage}
+                  alt={`${owner.name} profile portrait`}
+                  className="h-48 w-48 rounded-full border-4 border-white object-cover shadow-glow dark:border-white/10"
+                  width="192"
+                  height="192"
+                  loading="eager"
+                  fetchPriority="high"
+                />
+                <h2 className="mt-7 text-2xl font-bold text-ink dark:text-white">
                   {owner.name}
                 </h2>
                 <p className="mt-2 text-sm font-semibold text-primary dark:text-cyan-200">
-                  {owner.nickname}
+                  University IT Student
                 </p>
                 <p className="mt-4 max-w-xs text-sm leading-7 text-muted dark:text-slate-300">
-                  Profile image placeholder ready for a professional photo.
+                  Based in {owner.location}, preparing for internship and developer opportunities.
                 </p>
               </div>
             </div>

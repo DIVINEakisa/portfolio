@@ -1,6 +1,6 @@
-# Akisa Divine Portfolio
+# Divine Akisa Portfolio
 
-A modern responsive portfolio for Akisa Divine (Dede), built with React.js, Vite, and Tailwind CSS.
+A modern responsive portfolio for Divine Akisa, built with React.js, Vite, and Tailwind CSS.
 
 ## Getting Started
 
@@ -24,4 +24,4 @@ npm run preview
 - `src/data/portfolio.js` keeps content centralized for easy updates.
 - `src/hooks` contains reusable React hooks.
 
-Replace `public/akisa-divine-resume.txt` with the final resume PDF when it is available.
+Replace `public/divine-akisa-resume.txt` with the final resume PDF when it is available.

@@ -28,7 +28,7 @@ export default function About() {
         <SectionHeader
           eyebrow="About"
           title="A growing developer with a practical, user-first mindset."
-          description="Akisa Divine is building the technical range needed to move from strong fundamentals into real full-stack work."
+          description="Divine Akisa is a university student building the technical range needed to move from strong fundamentals into real full-stack work."
         />
 
         <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">

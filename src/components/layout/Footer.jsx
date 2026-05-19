@@ -1,9 +1,10 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Instagram, Mail, Phone } from "lucide-react";
 import { owner, socialLinks } from "../../data/portfolio.js";
 
 const iconMap = {
   github: Github,
-  linkedin: Linkedin,
+  instagram: Instagram,
+  phone: Phone,
   mail: Mail
 };
 
@@ -14,7 +15,7 @@ export default function Footer({ navItems }) {
         <div>
           <a href="#home" className="focus-ring inline-flex items-center gap-3 rounded-full">
             <span className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-primary to-accent text-sm font-bold text-white">
-              AD
+              {owner.initials}
             </span>
             <span>
               <span className="block text-sm font-bold text-ink dark:text-white">{owner.name}</span>
@@ -63,7 +64,7 @@ export default function Footer({ navItems }) {
         </div>
       </div>
       <div className="border-t border-slate-200 py-5 text-center text-sm text-muted dark:border-white/10 dark:text-slate-500">
-        &copy; {new Date().getFullYear()} Akisa Divine. All rights reserved.
+        &copy; {new Date().getFullYear()} {owner.name}. All rights reserved.
       </div>
     </footer>
   );

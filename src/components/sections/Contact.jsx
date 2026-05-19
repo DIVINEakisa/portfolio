@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, MapPin, Send } from "lucide-react";
+import { Github, Instagram, Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
 import SectionHeader from "../ui/SectionHeader.jsx";
 import Reveal from "../ui/Reveal.jsx";
@@ -6,8 +6,9 @@ import { owner } from "../../data/portfolio.js";
 
 const contacts = [
   { label: "Email", value: owner.email, href: `mailto:${owner.email}`, icon: Mail },
-  { label: "GitHub", value: "github.com/akisa-divine", href: owner.github, icon: Github },
-  { label: "LinkedIn", value: "linkedin.com/in/akisa-divine", href: owner.linkedin, icon: Linkedin },
+  { label: "Phone", value: owner.phone, href: `tel:${owner.phone}`, icon: Phone },
+  { label: "GitHub", value: "github.com/DIVINEakisa", href: owner.github, icon: Github },
+  { label: "Instagram", value: "instagram.com/acsah_divin", href: owner.instagram, icon: Instagram },
   { label: "Location", value: owner.location, href: "#contact", icon: MapPin }
 ];
 

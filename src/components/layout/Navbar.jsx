@@ -1,5 +1,6 @@
 import { Menu, Moon, Sun, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { owner } from "../../data/portfolio.js";
 
 export default function Navbar({ navItems, theme, onToggleTheme }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,11 +26,11 @@ export default function Navbar({ navItems, theme, onToggleTheme }) {
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8" aria-label="Primary navigation">
         <a href="#home" className="focus-ring flex items-center gap-3 rounded-full">
           <span className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-primary to-accent text-sm font-bold text-white shadow-glow">
-            AD
+            {owner.initials}
           </span>
           <span>
-            <span className="block text-sm font-bold text-ink dark:text-white">Akisa Divine</span>
-            <span className="block text-xs text-muted dark:text-slate-400">Dede</span>
+            <span className="block text-sm font-bold text-ink dark:text-white">{owner.name}</span>
+            <span className="block text-xs text-muted dark:text-slate-400">University IT Student</span>
           </span>
         </a>
 

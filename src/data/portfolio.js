@@ -1,18 +1,20 @@
 export const owner = {
-  name: "Akisa Divine",
-  nickname: "Dede",
-  role: "IT Student | Aspiring Full-Stack Web Developer",
+  name: "Divine Akisa",
+  initials: "AD",
+  role: "University IT Student | Aspiring Full-Stack Web Developer",
   title: "Frontend & Full-Stack Developer in Training",
-  location: "Rwanda",
-  email: "akisa.divine@example.com",
-  github: "https://github.com/akisa-divine",
-  linkedin: "https://www.linkedin.com/in/akisa-divine",
+  location: "Rwanda - Kigali, Kicukiro",
+  email: "akisadivine11@gmail.com",
+  phone: "+250792502568",
+  github: "https://github.com/DIVINEakisa",
+  instagram: "https://www.instagram.com/acsah_divin",
+  profileImage: "/profile-divine-akisa.jpg",
   bio:
-    "I am an IT student passionate about software development, web technologies, and solving real-world problems through technology. I enjoy learning modern development tools, creating practical projects, and continuously improving my technical and problem-solving skills. I am interested in building scalable and user-friendly applications.",
+    "I am a university IT student passionate about software development, web technologies, and solving real-world problems through technology. I enjoy learning modern development tools, creating practical projects, and continuously improving my technical and problem-solving skills. I am interested in building scalable and user-friendly applications.",
   headline:
     "Building modern web experiences and solving real-world problems through technology.",
   subheading:
-    "IT student passionate about React, Node.js, databases, and creating practical software solutions."
+    "University IT student passionate about React, Node.js, databases, and creating practical software solutions."
 };
 
 export const navItems = [
@@ -24,7 +26,7 @@ export const navItems = [
   { label: "Contact", href: "#contact" }
 ];
 
-// Content is separated from presentation so Akisa can update the portfolio quickly.
+// Content is separated from presentation so Divine can update the portfolio quickly.
 export const skillGroups = [
   {
     title: "Frontend",
@@ -63,7 +65,7 @@ export const projects = [
     result:
       "Improved organization and simplified management of student information.",
     stack: ["React.js", "Node.js", "Express.js", "PostgreSQL"],
-    github: "https://github.com/akisa-divine/student-management-system",
+    github: "https://github.com/RP-Kigali-Capstone",
     demo: "#contact"
   },
   {
@@ -74,7 +76,7 @@ export const projects = [
     approach: "Created an Arduino-based monitoring solution.",
     result: "Reduced unnecessary water loss and improved efficiency.",
     stack: ["Arduino", "Sensors", "Embedded Systems", "Problem Solving"],
-    github: "https://github.com/akisa-divine/water-tank-overflow-detection",
+    github: "https://github.com/DIVINEakisa",
     demo: "#contact"
   }
 ];
@@ -82,7 +84,7 @@ export const projects = [
 export const education = [
   {
     program: "Information Technology",
-    status: "Student",
+    status: "University Student",
     focus: "Software development, databases, networking, and practical systems.",
     period: "Current"
   },
@@ -96,6 +98,7 @@ export const education = [
 
 export const socialLinks = [
   { label: "GitHub", href: owner.github, icon: "github" },
-  { label: "LinkedIn", href: owner.linkedin, icon: "linkedin" },
-  { label: "Email", href: `mailto:${owner.email}`, icon: "mail" }
+  { label: "Instagram", href: owner.instagram, icon: "instagram" },
+  { label: "Email", href: `mailto:${owner.email}`, icon: "mail" },
+  { label: "Phone", href: `tel:${owner.phone}`, icon: "phone" }
 ];
