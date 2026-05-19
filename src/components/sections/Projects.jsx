@@ -1,4 +1,5 @@
-import { ArrowRight, Droplets, ExternalLink, Github, Users } from "lucide-react";
+import { ArrowRight, Droplets, ExternalLink, Github, Users, X } from "lucide-react";
+import { useEffect, useState } from "react";
 import SectionHeader from "../ui/SectionHeader.jsx";
 import Badge from "../ui/Badge.jsx";
 import ButtonLink from "../ui/ButtonLink.jsx";
@@ -8,6 +9,22 @@ import { projects } from "../../data/portfolio.js";
 const projectIcons = [Users, Droplets];
 
 export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") setSelectedProject(null);
+    };
+
+    document.body.style.overflow = selectedProject ? "hidden" : "";
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedProject]);
+
   return (
     <section id="projects" className="bg-white dark:bg-darkgray">
       <div className="section-shell">
@@ -66,9 +83,14 @@ export default function Projects() {
                     <ButtonLink href={project.demo} variant="secondary" icon={ExternalLink}>
                       Live Demo
                     </ButtonLink>
-                    <ButtonLink href="#contact" variant="primary" icon={ArrowRight}>
+                    <button
+                      type="button"
+                      onClick={() => setSelectedProject(project)}
+                      className="focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white shadow-glow transition duration-300 hover:-translate-y-0.5 hover:bg-blue-700"
+                    >
+                      <ArrowRight className="h-4 w-4" aria-hidden="true" />
                       View Details
-                    </ButtonLink>
+                    </button>
                   </div>
                 </div>
               </Reveal>
@@ -76,6 +98,10 @@ export default function Projects() {
           })}
         </div>
       </div>
+
+      {selectedProject ? (
+        <ProjectDetailsModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+      ) : null}
     </section>
   );
 }
@@ -87,6 +113,62 @@ function ProjectPoint({ label, text }) {
         {label}
       </p>
       <p className="mt-2 leading-7 text-slate-700 dark:text-slate-300">{text}</p>
+    </div>
+  );
+}
+
+function ProjectDetailsModal({ project, onClose }) {
+  return (
+    <div
+      className="fixed inset-0 z-[70] grid place-items-center bg-secondary/70 px-5 py-8 backdrop-blur-sm"
+      role="presentation"
+      onMouseDown={onClose}
+    >
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="project-dialog-title"
+        className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-3xl bg-white p-6 shadow-2xl dark:bg-secondary sm:p-8"
+        onMouseDown={(event) => event.stopPropagation()}
+      >
+        <div className="flex items-start justify-between gap-5">
+          <div>
+            <p className="text-sm font-bold text-primary dark:text-cyan-300">{project.type}</p>
+            <h3 id="project-dialog-title" className="mt-2 text-2xl font-black text-ink dark:text-white">
+              {project.title}
+            </h3>
+          </div>
+          <button
+            type="button"
+            onClick={onClose}
+            className="focus-ring grid h-11 w-11 shrink-0 place-items-center rounded-full border border-slate-200 text-slate-600 transition hover:border-primary/30 hover:text-primary dark:border-white/10 dark:text-slate-300 dark:hover:text-cyan-200"
+            aria-label="Close project details"
+          >
+            <X className="h-5 w-5" aria-hidden="true" />
+          </button>
+        </div>
+
+        <div className="mt-7 grid gap-5">
+          <ProjectPoint label="Context" text={project.problem} />
+          <ProjectPoint label="Action" text={project.approach} />
+          <ProjectPoint label="Result" text={project.result} />
+        </div>
+
+        <div className="mt-7 flex flex-wrap gap-2">
+          {project.stack.map((tech) => (
+            <Badge key={tech}>{tech}</Badge>
+          ))}
+        </div>
+
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <ButtonLink href={project.github} target="_blank" variant="secondary" icon={Github}>
+            GitHub
+          </ButtonLink>
+          <ButtonLink href={project.demo} variant="primary" icon={ExternalLink}>
+            Live Demo
+          </ButtonLink>
+        </div>
+      </div>
     </div>
   );
 }
