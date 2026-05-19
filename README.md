@@ -1,2 +1,27 @@
-# portfolio
-A portfolio of my work, projects, and learning journey
+# Akisa Divine Portfolio
+
+A modern responsive portfolio for Akisa Divine (Dede), built with React.js, Vite, and Tailwind CSS.
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+## Production Build
+
+```bash
+npm run build
+npm run preview
+```
+
+## Structure
+
+- `src/components/layout` contains shared page chrome.
+- `src/components/sections` contains portfolio sections.
+- `src/components/ui` contains reusable presentation helpers.
+- `src/data/portfolio.js` keeps content centralized for easy updates.
+- `src/hooks` contains reusable React hooks.
+
+Replace `public/akisa-divine-resume.txt` with the final resume PDF when it is available.
