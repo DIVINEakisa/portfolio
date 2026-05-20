@@ -51,27 +51,28 @@ export default function Hero() {
         <Reveal delay={180} className="relative mx-auto w-full max-w-[440px] lg:ml-auto">
           <div className="absolute inset-x-10 top-8 -z-10 h-24 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 blur-2xl" aria-hidden="true" />
           <div className="glass-card relative overflow-hidden rounded-[2rem] p-5">
-            <div className="aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-secondary via-primary to-accent p-1">
-              <div className="flex h-full flex-col items-center justify-center rounded-[1.25rem] bg-white/90 p-8 text-center dark:bg-secondary/[0.92]">
-                <img
-                  src={owner.profileImage}
-                  alt={`${owner.name} profile portrait`}
-                  className="h-48 w-48 rounded-full border-4 border-white object-cover shadow-glow dark:border-white/10"
-                  width="192"
-                  height="192"
-                  loading="eager"
-                  fetchPriority="high"
-                />
-                <h2 className="mt-7 text-2xl font-bold text-ink dark:text-white">
-                  {owner.name}
-                </h2>
-                <p className="mt-2 text-sm font-semibold text-primary dark:text-cyan-200">
-                  University IT Student
-                </p>
-                <p className="mt-4 max-w-xs text-sm leading-7 text-muted dark:text-slate-300">
-                  Based in {owner.location}, preparing for internship and developer opportunities.
-                </p>
-              </div>
+            <div className="overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-secondary via-primary to-accent p-1">
+              <img
+                src={owner.profileImage}
+                alt={`${owner.name} profile portrait`}
+                className="aspect-[4/5] h-full w-full rounded-[1.25rem] object-cover object-center shadow-glow"
+                width="900"
+                height="1125"
+                loading="eager"
+                fetchPriority="high"
+              />
+            </div>
+
+            <div className="px-2 pt-6 text-center">
+              <h2 className="text-2xl font-bold text-ink dark:text-white">
+                {owner.name}
+              </h2>
+              <p className="mt-2 text-sm font-semibold text-primary dark:text-cyan-200">
+                University IT Student
+              </p>
+              <p className="mx-auto mt-4 max-w-xs text-sm leading-7 text-muted dark:text-slate-300">
+                Based in {owner.location}, preparing for internship and developer opportunities.
+              </p>
             </div>
 
             <div className="mt-5 grid grid-cols-3 gap-3">
