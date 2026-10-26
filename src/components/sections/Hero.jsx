@@ -31,8 +31,8 @@ export default function Hero() {
 
           <Reveal delay={240} className="mt-8 flex flex-col gap-3 sm:flex-row">
             <ButtonLink href="#projects" icon={ArrowRight}>View Projects</ButtonLink>
-            <ButtonLink href="/divine-akisa-resume.txt" icon={Download} variant="secondary" download>
-              Download Resume
+            <ButtonLink href="/AKISA_Divine.pdf" icon={Download} variant="secondary" download>
+              Download CV
             </ButtonLink>
             <ButtonLink href="#contact" icon={Mail} variant="ghost">Contact Me</ButtonLink>
           </Reveal>
@@ -68,15 +68,15 @@ export default function Hero() {
                 {owner.name}
               </h2>
               <p className="mt-2 text-sm font-semibold text-primary dark:text-cyan-200">
-                University IT Student
+                Software Developer & Full-Stack Developer
               </p>
               <p className="mx-auto mt-4 max-w-xs text-sm leading-7 text-muted dark:text-slate-300">
-                Based in {owner.location}, preparing for internship and developer opportunities.
+                Based in {owner.location}, building AI-powered and full-stack web solutions.
               </p>
             </div>
 
             <div className="mt-5 grid grid-cols-3 gap-3">
-              {["React", "Node", "SQL"].map((item) => (
+              {["React", "NestJS", "TypeScript"].map((item) => (
                 <div key={item} className="rounded-2xl bg-slate-50 px-3 py-4 text-center text-sm font-bold text-ink dark:bg-white/[0.08] dark:text-white">
                   {item}
                 </div>
