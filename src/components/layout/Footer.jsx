@@ -1,9 +1,9 @@
-import { Github, Instagram, Mail, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import { owner, socialLinks } from "../../data/portfolio.js";
 
 const iconMap = {
   github: Github,
-  instagram: Instagram,
+  linkedin: Linkedin,
   phone: Phone,
   mail: Mail
 };
@@ -19,11 +19,11 @@ export default function Footer({ navItems }) {
             </span>
             <span>
               <span className="block text-sm font-bold text-ink dark:text-white">{owner.name}</span>
-              <span className="block text-xs text-muted dark:text-slate-400">{owner.title}</span>
+              <span className="block text-xs text-muted dark:text-slate-400">{owner.role}</span>
             </span>
           </a>
           <p className="mt-4 max-w-sm text-sm leading-7 text-muted dark:text-slate-400">
-            Building practical software, learning deeply, and preparing for developer opportunities.
+            Building accessible, AI-powered digital solutions that solve real-world problems.
           </p>
         </div>
 
@@ -47,6 +47,7 @@ export default function Footer({ navItems }) {
           <div className="mt-4 flex gap-3">
             {socialLinks.map((link) => {
               const Icon = iconMap[link.icon];
+              if (!Icon) return null;
               return (
                 <a
                   key={link.label}
