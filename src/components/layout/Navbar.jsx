@@ -30,7 +30,7 @@ export default function Navbar({ navItems, theme, onToggleTheme }) {
           </span>
           <span>
             <span className="block text-sm font-bold text-ink dark:text-white">{owner.name}</span>
-            <span className="block text-xs text-muted dark:text-slate-400">University IT Student</span>
+            <span className="block text-xs text-muted dark:text-slate-400">Software Developer</span>
           </span>
         </a>
 
