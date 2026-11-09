@@ -6,18 +6,18 @@ import { owner } from "../../data/portfolio.js";
 const highlights = [
   {
     icon: Code2,
-    title: "Modern web foundations",
-    text: "Focused on React, JavaScript, APIs, databases, and clean application structure."
+    title: "Full-stack development",
+    text: "Specialized in React, TypeScript, Node.js, NestJS, and modern databases — building end-to-end web applications."
   },
   {
     icon: Lightbulb,
-    title: "Practical problem solving",
-    text: "Interested in projects that turn real challenges into simple, usable software."
+    title: "AI-powered solutions",
+    text: "Passionate about Generative AI and building human-centered software that improves healthcare accessibility and mental wellness."
   },
   {
     icon: Target,
-    title: "Internship ready mindset",
-    text: "Learning consistently, documenting progress, and building with professional habits."
+    title: "Real-world impact",
+    text: "Every project is built around a real problem — from maternal nutrition platforms to agricultural decision-support tools."
   }
 ];
 
@@ -27,8 +27,8 @@ export default function About() {
       <div className="section-shell">
         <SectionHeader
           eyebrow="About"
-          title="A growing developer with a practical, user-first mindset."
-          description="Divine Akisa is a university student building the technical range needed to move from strong fundamentals into real full-stack work."
+          title="A software developer with a practical, user-first mindset."
+          description="Divine Akisa is a full-stack developer building accessible, AI-powered digital solutions that solve real-world problems in healthcare, agriculture, and beyond."
         />
 
         <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
@@ -42,7 +42,7 @@ export default function About() {
                 <p className="mt-2 text-lg font-bold text-ink dark:text-white">{owner.location}</p>
               </div>
               <div className="rounded-2xl bg-secondary p-5 text-white">
-                <p className="text-sm font-semibold text-slate-300">Current role</p>
+                <p className="text-sm font-semibold text-slate-300">Role</p>
                 <p className="mt-2 text-lg font-bold">{owner.role}</p>
               </div>
             </div>
