@@ -1,4 +1,4 @@
-import { ArrowRight, Droplets, ExternalLink, Github, Users, X } from "lucide-react";
+import { ArrowRight, ExternalLink, Github, Leaf, Wheat, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import SectionHeader from "../ui/SectionHeader.jsx";
 import Badge from "../ui/Badge.jsx";
@@ -6,7 +6,7 @@ import ButtonLink from "../ui/ButtonLink.jsx";
 import Reveal from "../ui/Reveal.jsx";
 import { projects } from "../../data/portfolio.js";
 
-const projectIcons = [Users, Droplets];
+const projectIcons = [Leaf, Wheat];
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -30,13 +30,13 @@ export default function Projects() {
       <div className="section-shell">
         <SectionHeader
           eyebrow="Projects"
-          title="Practical projects shaped around real problems."
-          description="Each project highlights context, action, and result so internship reviewers can quickly understand the value and technical direction."
+          title="Real problems. Practical solutions. Meaningful impact."
+          description="Each project is built around a real challenge — from maternal nutrition in Rwanda to agricultural decision-support using national statistics."
         />
 
         <div className="grid gap-7">
           {projects.map((project, index) => {
-            const VisualIcon = projectIcons[index] || Users;
+            const VisualIcon = projectIcons[index] || Leaf;
 
             return (
               <Reveal
@@ -77,10 +77,10 @@ export default function Projects() {
                   </div>
 
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                    <ButtonLink href={project.github} target="_blank" variant="secondary" icon={Github}>
+                    <ButtonLink href={project.github} target="_blank" rel="noreferrer" variant="secondary" icon={Github}>
                       GitHub
                     </ButtonLink>
-                    <ButtonLink href={project.demo} variant="secondary" icon={ExternalLink}>
+                    <ButtonLink href={project.demo} target="_blank" rel="noreferrer" variant="secondary" icon={ExternalLink}>
                       Live Demo
                     </ButtonLink>
                     <button
@@ -161,10 +161,10 @@ function ProjectDetailsModal({ project, onClose }) {
         </div>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <ButtonLink href={project.github} target="_blank" variant="secondary" icon={Github}>
+          <ButtonLink href={project.github} target="_blank" rel="noreferrer" variant="secondary" icon={Github}>
             GitHub
           </ButtonLink>
-          <ButtonLink href={project.demo} variant="primary" icon={ExternalLink}>
+          <ButtonLink href={project.demo} target="_blank" rel="noreferrer" variant="primary" icon={ExternalLink}>
             Live Demo
           </ButtonLink>
         </div>
