@@ -1,20 +1,21 @@
 export const owner = {
   name: "Divine Akisa",
   initials: "AD",
-  role: "University IT Student | Aspiring Full-Stack Web Developer",
-  title: "Frontend & Full-Stack Developer in Training",
-  location: "Rwanda - Kigali, Kicukiro",
+  role: "Software Developer | Full-Stack Developer",
+  title: "Full-Stack Developer & AI Enthusiast",
+  location: "Kigali, Rwanda",
   email: "akisadivine11@gmail.com",
   phone: "+250792502568",
   github: "https://github.com/DIVINEakisa",
+  linkedin: "https://www.linkedin.com/in/divine-akisa-b18802399",
   instagram: "https://www.instagram.com/acsah_divin",
   profileImage: "/profile-divine-akisa.jpg",
   bio:
-    "I am a university IT student passionate about software development, web technologies, and solving real-world problems through technology. I enjoy learning modern development tools, creating practical projects, and continuously improving my technical and problem-solving skills. I am interested in building scalable and user-friendly applications.",
+    "I am a software developer passionate about building accessible, AI-powered digital solutions that solve real-world problems. I specialize in full-stack web development and enjoy creating practical, user-centered applications — from healthcare platforms to data-driven tools with real social impact.",
   headline:
     "Building modern web experiences and solving real-world problems through technology.",
   subheading:
-    "University IT student passionate about React, Node.js, databases, and creating practical software solutions."
+    "Full-Stack Developer specializing in React, TypeScript, Node.js, NestJS, and AI-powered applications."
 };
 
 export const navItems = [
@@ -26,79 +27,86 @@ export const navItems = [
   { label: "Contact", href: "#contact" }
 ];
 
-// Content is separated from presentation so Divine can update the portfolio quickly.
 export const skillGroups = [
   {
     title: "Frontend",
     icon: "layout",
-    description: "Interfaces that are responsive, accessible, and easy to use.",
-    skills: ["HTML", "CSS and Tailwind CSS", "JavaScript", "React.js"]
+    description: "Responsive, accessible interfaces built with modern component-based architecture.",
+    skills: ["HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript", "React.js", "Tailwind CSS"]
   },
   {
     title: "Backend",
     icon: "server",
-    description: "APIs and server-side logic for practical software workflows.",
-    skills: ["Node.js", "Express.js"]
+    description: "Scalable server-side logic, REST APIs, and backend application architecture.",
+    skills: ["Node.js", "NestJS", "Express.js", "RESTful APIs", "PHP"]
   },
   {
     title: "Database",
     icon: "database",
     description: "Structured data modeling, querying, and application storage.",
-    skills: ["PostgreSQL", "MongoDB", "SQL"]
+    skills: ["PostgreSQL", "MongoDB", "MySQL", "SQL", "Drizzle ORM"]
   },
   {
-    title: "Tools",
+    title: "Tools & AI",
     icon: "tool",
-    description: "Development workflow tools for version control and productivity.",
-    skills: ["Git", "GitHub", "VS Code"]
+    description: "Development workflow, containerization, and AI-powered application development.",
+    skills: ["Git", "GitHub", "Docker", "Postman", "Generative AI", "Prompt Engineering"]
   }
 ];
 
 export const projects = [
   {
-    title: "Student Management System",
-    type: "Full-stack web application",
-    imageLabel: "Student records dashboard",
-    problem: "Managing student records manually can be inefficient and difficult.",
+    title: "Kura 🌱",
+    type: "Maternal & Child Nutrition Platform",
+    imageLabel: "Every Stage. Every Mother. Every Child.",
+    problem:
+      "Mothers and children in Rwanda lack a unified digital platform that supports the full nutrition journey — from pre-conception and pregnancy through breastfeeding, complementary feeding, and early childhood.",
     approach:
-      "Built using React.js, Node.js, Express.js, and PostgreSQL with user-friendly interfaces and organized database structure.",
+      "Built a multi-organization maternal and child nutrition platform using Next.js 16 (App Router), TypeScript, PostgreSQL, and Drizzle ORM. Designed as an installable PWA with Recharts-powered dashboards and Tailwind CSS 4 for a clean, responsive UI.",
     result:
-      "Improved organization and simplified management of student information.",
-    stack: ["React.js", "Node.js", "Express.js", "PostgreSQL"],
-    github: "https://github.com/RP-Kigali-Capstone",
-    demo: "#contact"
+      "A production-ready platform deployed on Vercel that helps mothers and healthcare organizations track and support nutrition at every stage of early life. 'Kura' means 'grow' in Kinyarwanda.",
+    stack: ["Next.js 16", "TypeScript", "PostgreSQL", "Drizzle ORM", "Tailwind CSS 4", "Recharts", "PWA"],
+    github: "https://github.com/DIVINEakisa/Kura.git",
+    demo: "https://kura-neza.vercel.app/"
   },
   {
-    title: "Water Tank Overflow Detection System",
-    type: "Arduino monitoring solution",
-    imageLabel: "Water level monitor",
-    problem: "Water tanks overflow and waste water in homes.",
-    approach: "Created an Arduino-based monitoring solution.",
-    result: "Reduced unnecessary water loss and improved efficiency.",
-    stack: ["Arduino", "Sensors", "Embedded Systems", "Problem Solving"],
-    github: "https://github.com/DIVINEakisa",
-    demo: "#contact"
+    title: "Musaruro 🌾",
+    type: "Agricultural Decision-Support Tool",
+    imageLabel: "Know Your Yield, Act in Time.",
+    problem:
+      "Farmers, agricultural extension officers, and planners in Rwanda lack accessible tools to interpret NISR agricultural statistics and satellite rainfall data at the district level.",
+    approach:
+      "Transformed NISR agricultural statistics and satellite rainfall data into an interactive district-level decision-support tool. Built for the NISR Big Data Hackathon 2026 (Track 1: Agricultural Productivity), the platform surfaces where crop yields fall below national averages, where irrigation gaps exist, and when rainfall patterns are anomalous.",
+    result:
+      "A live data application deployed on Streamlit that empowers users to identify underperforming districts, investigate conditions, and make informed agricultural decisions. 'Musaruro' means 'harvest' in Kinyarwanda.",
+    stack: ["Python", "Streamlit", "Pandas", "Satellite Data", "NISR Statistics", "Data Visualization"],
+    github: "https://github.com/DIVINEakisa/Musaruro",
+    demo: "https://musaruro-app.streamlit.app/"
   }
 ];
 
 export const education = [
   {
-    program: "Information Technology",
-    status: "University Student",
-    focus: "Software development, databases, networking, and practical systems.",
+    program: "Advanced Diploma in Information Technology",
+    institution: "Rwanda Polytechnic – Kigali College of Technology (RP-KiCT)",
+    status: "2024 – Present",
+    focus:
+      "Software Engineering, Web Application Development, Backend Systems Development, Database Management, Artificial Intelligence Concepts, and Software Design Practices.",
     period: "Current"
   },
   {
-    program: "Full-Stack Developer Learning Path",
-    status: "In progress",
-    focus: "React, Node.js, Express.js, SQL, MongoDB, Git, and deployment readiness.",
-    period: "Ongoing"
+    program: "Full-Stack Development Programme",
+    institution: "TheGym Rwanda",
+    status: "Completed",
+    focus:
+      "Completed an intensive full-stack software engineering training programme. Built applications using JavaScript, React, Node.js, NestJS, REST APIs, PostgreSQL, and MongoDB. Practiced Agile methodologies, Git workflows, feature branching, code reviews, and collaborative development.",
+    period: "Graduated"
   }
 ];
 
 export const socialLinks = [
   { label: "GitHub", href: owner.github, icon: "github" },
-  { label: "Instagram", href: owner.instagram, icon: "instagram" },
+  { label: "LinkedIn", href: owner.linkedin, icon: "linkedin" },
   { label: "Email", href: `mailto:${owner.email}`, icon: "mail" },
   { label: "Phone", href: `tel:${owner.phone}`, icon: "phone" }
 ];
