@@ -9,9 +9,9 @@ export default function Education() {
       <div className="section-shell">
         <SectionHeader
           align="center"
-          eyebrow="Education"
-          title="Information Technology studies with a clear developer direction."
-          description="A simple timeline that shows current academic focus and continued full-stack growth."
+          eyebrow="Education & Training"
+          title="Academic foundation and professional training."
+          description="A timeline of formal education and completed developer training that shapes my technical foundation."
         />
 
         <div className="relative mx-auto max-w-4xl">
@@ -27,6 +27,9 @@ export default function Education() {
                     <div>
                       <p className="text-sm font-bold text-primary dark:text-cyan-300">{item.period}</p>
                       <h3 className="mt-2 text-2xl font-bold text-ink dark:text-white">{item.program}</h3>
+                      {item.institution ? (
+                        <p className="mt-1 text-sm font-semibold text-muted dark:text-slate-400">{item.institution}</p>
+                      ) : null}
                     </div>
                     <span className="w-fit rounded-full bg-secondary px-4 py-2 text-sm font-bold text-white dark:bg-white/10">
                       {item.status}
