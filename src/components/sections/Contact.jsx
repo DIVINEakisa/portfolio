@@ -1,4 +1,4 @@
-import { Github, Instagram, Mail, MapPin, Phone, Send } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
 import SectionHeader from "../ui/SectionHeader.jsx";
 import Reveal from "../ui/Reveal.jsx";
@@ -8,7 +8,7 @@ const contacts = [
   { label: "Email", value: owner.email, href: `mailto:${owner.email}`, icon: Mail },
   { label: "Phone", value: owner.phone, href: `tel:${owner.phone}`, icon: Phone },
   { label: "GitHub", value: "github.com/DIVINEakisa", href: owner.github, icon: Github },
-  { label: "Instagram", value: "instagram.com/acsah_divin", href: owner.instagram, icon: Instagram },
+  { label: "LinkedIn", value: "linkedin.com/in/divine-akisa-b18802399", href: owner.linkedin, icon: Linkedin },
   { label: "Location", value: owner.location, href: "#contact", icon: MapPin }
 ];
 
@@ -17,7 +17,7 @@ export default function Contact() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setStatus("Thanks for reaching out. This demo form is ready to connect to a backend or form service.");
+    setStatus("Thanks for reaching out. I will get back to you as soon as possible.");
     event.currentTarget.reset();
   };
 
@@ -26,8 +26,8 @@ export default function Contact() {
       <div className="section-shell">
         <SectionHeader
           eyebrow="Contact"
-          title="Open to internship conversations and developer opportunities."
-          description="Use the form or social links to connect about projects, collaboration, or learning opportunities."
+          title="Open to collaboration and developer opportunities."
+          description="Use the form or social links to connect about projects, collaboration, or new opportunities."
         />
 
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
